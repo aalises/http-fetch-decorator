@@ -1,0 +1,26 @@
+{
+  "name": "http-fetch-decorator",
+  "version": "0.1.0",
+  "description": "Decorator that wraps the fetch interface for retrieving JSON data",
+  "main": "dist/http-fetch-decorator.umd.js",
+  "scripts": {
+    "build": "rollup -c rollup.config.js"
+  },
+  "keywords": [
+    "fetch",
+    "http",
+    "decorator"
+  ],
+  "author": "aalises",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-preset-env": "^1.7.0",
+    "rollup": "^0.62.0",
+    "rollup-plugin-babel": "^3.0.7"
+  },
+  "dependencies": {
+    "kaop-ts": "^4.0.0"
+  }
+}
