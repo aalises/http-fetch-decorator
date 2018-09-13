@@ -13,7 +13,6 @@ Then you can place the decorator which has the same input structure as the fetch
 static wrappedFunction(params: Object, result? : Response, err? : any){
   ...
 }
-
 ```
 
 ### How to use it
@@ -25,16 +24,27 @@ class AnyES6Class {
   @Fetch("apiexample/getsomething", {method: 'GET',mode:'cors'})
   static parseResponse({id: '1'},result,err) {
     if(err) throw err;
-    //result contains the Response object from fetch, then you can parse it as a json for example
+    //Result contains the Response object from fetch, then you can parse it as a json for example
     return result.json()
       .then(data => {
-        return data;
+        //Do something with the data
       })
       .catch(err =>{
         throw err;
       })
   }
 }
+```
+You can encapsulate the decorator into another decorator, for example when you want a fetch function with a specific set of options (that is reusable). For example, imagine that you want to make a **POST** request but you don't want to specify the mode on the options each time, you can make something like:
+
+```js
+const Post = url => Fetch(url, { method: 'POST' });
+
+@Post("apiexample/postsomething")
+static postBook({title: 'Amazing Book', ISBN: '12434'},result,err) {
+  ...
+}
+
 ```
 
 
