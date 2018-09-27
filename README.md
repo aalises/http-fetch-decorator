@@ -1,4 +1,4 @@
-### HTTP @Fetch Decorator
+# HTTP Fetch Decorator
 
 Simple Fetch interface decorator wrapper for your functions.
 
