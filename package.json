@@ -1,8 +1,10 @@
 {
   "name": "http-fetch-decorator",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Decorator that wraps the fetch interface for retrieving JSON data",
-  "main": "dist/http-fetch-decorator.umd.js",
+  "main": "dist/http-fetch-decorator.es.js",
+  "browser": "dist/http-fetch-decorator.umd.js",
+  "module": "dist/http-fetch-decorator.es.js",
   "scripts": {
     "build": "rollup -c rollup.config.js"
   },
